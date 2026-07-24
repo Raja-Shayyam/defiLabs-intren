@@ -1,0 +1,236 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "alreadyInCourse",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "onlyAdminHaveAcces",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "student_not_exist",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "updateValidTAsk_value",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "internAddress",
+						"type": "address"
+					}
+				],
+				"name": "InternDeactivated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "internAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes20",
+						"name": "course",
+						"type": "bytes20"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "age",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isRemote",
+						"type": "bool"
+					}
+				],
+				"name": "InternRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getDataRecord",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_compeletedTasks",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isActive",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isremote",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes20",
+						"name": "_course",
+						"type": "bytes20"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getMeInternee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_permenent_block",
+						"type": "bool"
+					}
+				],
+				"name": "toDeactive",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_cTask",
+						"type": "uint8"
+					}
+				],
+				"name": "upDateYOURcompletedTASKS",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isremote",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "upDateYOURinfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/t4InterneRecord.sol": "InternshipProgressTracker"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/t4InterneRecord.sol": {
+			"keccak256": "0x8b48a63e84ab1ebe23fdbc300c52d8201329152292a8eb85fe1d6dc3c19ae367",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://613248bd2ed790359dac56ccfa1247646cf1e9212b4c37476813aeaaea95de5e",
+				"dweb:/ipfs/QmWZHB4Bnf2J7manHA3KZkXcxQrtW2WNBG8TpA6ChNaopE"
+			]
+		}
+	},
+	"version": 1
+}
