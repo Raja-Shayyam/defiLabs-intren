@@ -12,7 +12,7 @@ contract InternshipProgressTracker {
      event InternRegistered(
         address indexed internAddress,
         string name,
-        bytes20 course,
+        string course,
         uint8 age,
         bool isRemote
     );
@@ -29,7 +29,7 @@ contract InternshipProgressTracker {
         bool active_status;
         bool isRemoteWork;
         bool permenent_block;
-        bytes20 courseName;
+        string courseName;
         string name;
     }
 
@@ -37,7 +37,7 @@ contract InternshipProgressTracker {
 
     modifier OnlyAdmin(address _addr){
         address payable admin = payable(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
-        if(msg.sender != _addr) revert onlyAdminHaveAcces();
+        if(msg.sender != admin) revert onlyAdminHaveAcces();
         _;
     }
     modifier CheckStudent(){
@@ -49,7 +49,7 @@ contract InternshipProgressTracker {
         owner_deployer = msg.sender;
     }
 
-    function getMeInternee(address _addr,uint8 _age, bool _isremote, bytes20 _course ,string memory _name) public {
+    function getMeInternee(address _addr,uint8 _age, bool _isremote, string memory _course ,string memory _name) public {
         // if(studentAddress[msg.sender].courseName != _course) revert alreadyInCourse();
             uint8 _cTasks = 0;
             bool _isActive = true;

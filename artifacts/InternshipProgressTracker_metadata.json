@@ -60,9 +60,9 @@
 					},
 					{
 						"indexed": false,
-						"internalType": "bytes20",
+						"internalType": "string",
 						"name": "course",
-						"type": "bytes20"
+						"type": "string"
 					},
 					{
 						"indexed": false,
@@ -126,9 +126,9 @@
 						"type": "bool"
 					},
 					{
-						"internalType": "bytes20",
+						"internalType": "string",
 						"name": "_course",
-						"type": "bytes20"
+						"type": "string"
 					},
 					{
 						"internalType": "string",
@@ -224,11 +224,11 @@
 	},
 	"sources": {
 		"contracts/t4InterneRecord.sol": {
-			"keccak256": "0x8b48a63e84ab1ebe23fdbc300c52d8201329152292a8eb85fe1d6dc3c19ae367",
+			"keccak256": "0x4515aa0e287b8c2a1af5ccd4b4b0db0a501b14875137a09c1b93dfde4ef83ddc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://613248bd2ed790359dac56ccfa1247646cf1e9212b4c37476813aeaaea95de5e",
-				"dweb:/ipfs/QmWZHB4Bnf2J7manHA3KZkXcxQrtW2WNBG8TpA6ChNaopE"
+				"bzz-raw://a5f65ee36e4c901e0d4c43ac2fdfab1a570fd8f0a92ed34224dff8cca45a3091",
+				"dweb:/ipfs/QmQHaCC2wm4NA3M6ugXkYUcKkWRLsU5b98QhCSFmqbcbuJ"
 			]
 		}
 	},
