@@ -49,7 +49,7 @@ contract RegisterBYowner {
         
     }
     function BYinterneeDalytasks(uint8 _taskINDEX) external isAlreadyExist(msg.sender){
-        getAllTasks();
+        // getAllTasks();
 
         dailytask_complete[msg.sender][_taskINDEX] = true;
         studentAddress[msg.sender].completed_tasks++;
@@ -57,11 +57,13 @@ contract RegisterBYowner {
         // emit (msg.sender, _taskINDEX, getTaskName(_taskINDEX));
     }
 
-    function getMyDONEtasks() external view isAlreadyExist(msg.sender) returns (bool[8] memory){
-        bool[8] memory status;
+    function getMyDONEtasks() external view isAlreadyExist(msg.sender) returns (string[] memory){
+        string[] memory status = new string[](totalTasks);
 
-        for(uint8 i=0; i<8; i++){
-            status[i] = dailytask_complete[msg.sender][i];
+        for(uint8 i=0; i<totalTasks; i++){
+            if(dailytask_complete[msg.sender][i+1]){
+                status[i] = string.concat(tasksBYadmin[i+1]," is done by me");
+            }
         }
         return status;
     }
@@ -90,7 +92,7 @@ contract RegisterBYowner {
         studentAddress[_adr].active_status = false;
     }
 
-    function getAllTasks() public view returns (string[] memory) {
+    function getAllTasks() external view returns (string[] memory) {
         string[] memory allTasks = new string[](totalTasks);
 
         for(uint8 i=0; i<totalTasks; i++){

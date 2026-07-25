@@ -102,9 +102,9 @@
 				"name": "getMyDONEtasks",
 				"outputs": [
 					{
-						"internalType": "bool[8]",
+						"internalType": "string[]",
 						"name": "",
-						"type": "bool[8]"
+						"type": "string[]"
 					}
 				],
 				"stateMutability": "view",
@@ -222,11 +222,11 @@
 	},
 	"sources": {
 		"contracts/t5interneeBYowner.sol": {
-			"keccak256": "0xa3cc1fac8ac1ff0010d9f49e887f5f552526529294aaa90719991975ad8640e0",
+			"keccak256": "0x368e5b8f85216efeb17db9cceff9928ee1f3526203b9973a10df3ac8323b771a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d6b2ef9963f518ee24ce266bfbe91683e4d7bd578e8fcb2454b095efd98a2dba",
-				"dweb:/ipfs/QmWg7D9jZDq6DXdVoRJwHPdnuW9GUTj9mtaG15eD9jp5gA"
+				"bzz-raw://be8d6155c72f704176733306fe34b348c39b7e36167bee4a705a55d4dcdae092",
+				"dweb:/ipfs/Qmb9AjbBs5YnoG58LwUR2SduVWX6sC9FCRxmUfbcwpxXba"
 			]
 		}
 	},
