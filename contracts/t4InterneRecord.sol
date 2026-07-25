@@ -36,8 +36,8 @@ contract InternshipProgressTracker {
     mapping (address => Student) studentAddress;
 
     modifier OnlyAdmin(address _addr){
-        address payable admin = payable(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
-        if(msg.sender != admin) revert onlyAdminHaveAcces();
+        // address payable admin = payable(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
+        if(msg.sender != owner_deployer) revert onlyAdminHaveAcces();
         _;
     }
     modifier CheckStudent(){
@@ -52,17 +52,17 @@ contract InternshipProgressTracker {
     function getMeInternee(address _addr,uint8 _age, bool _isremote, string memory _course ,string memory _name) public {
         // if(studentAddress[msg.sender].courseName != _course) revert alreadyInCourse();
 
-        if(!studentAddress[msg.sender].active_status){
+        if(!studentAddress[msg.sender].active_status){ // if student is not active then this if will work and register a new internee as himself 
             uint8 _cTasks = 0;
             bool _isActive = true;
             bool _permenent_block = false;
 
             studentAddress[_addr] = Student(_cTasks,_age, _isActive, _permenent_block,_isremote, _course,_name); // still geting from student his adress badd main msg.sender se fetch kr lain ge 
-        }else if(!studentAddress[_addr].permenent_block ){ // to active him in another course
+        }else if(!studentAddress[_addr].permenent_block ){ // to active him in another course 
             uint8 _cTasks = 0;
             bool _isActive = true;
             bool _permenent_block = false;
-            studentAddress[_addr] = Student(_cTasks,_age, _isActive,_permenent_block, _isremote, _course,_name); 
+            studentAddress[_addr] = Student(_cTasks,_age, _isActive,_permenent_block, _isremote, _course,_name); // still geting from student his adress badd main msg.sender se fetch krou ga
         }
         // Emit the registration event
         emit InternRegistered(msg.sender, _name, _course, _age, _isremote);
@@ -101,3 +101,15 @@ contract InternshipProgressTracker {
 
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
