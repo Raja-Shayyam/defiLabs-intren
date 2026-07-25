@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.34+commit.80d5c536"
+		"version": "0.8.20+commit.a1b79de6"
 	},
 	"language": "Solidity",
 	"output": {
@@ -19,6 +19,19 @@
 				"inputs": [],
 				"name": "Already_exist_this_interne",
 				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_adr",
+						"type": "address"
+					}
+				],
+				"name": "deActiveIntern",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -125,7 +138,7 @@
 		"compilationTarget": {
 			"contracts/t5interneeBYowner.sol": "RegisterBYowner"
 		},
-		"evmVersion": "osaka",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -138,11 +151,11 @@
 	},
 	"sources": {
 		"contracts/t5interneeBYowner.sol": {
-			"keccak256": "0xb5cd7df0b219e323d20176ac516d9dd48addf6585749cfb09dcd9fb421d64096",
+			"keccak256": "0xdc58ea17d426e446ed8972f75af03a39ca1707742fbff36c1d8a087862914e13",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6a09329ac01c2b52603b86076a1f8ae6493a249fcf612203683d8f394ff1edd9",
-				"dweb:/ipfs/Qmd6UrXPXhG9vRjCmeCULw7S84Gi9veW8kAKdUUyJKRGpA"
+				"bzz-raw://40920f66b5621cda199e3cf43e736e3c37a0040ac5ae70c7047bc7cc11cb5f62",
+				"dweb:/ipfs/QmRqNsCUdGGjqbp61nhhvt4KtC8fXYwvCBC2JZ4uByKzjt"
 			]
 		}
 	},

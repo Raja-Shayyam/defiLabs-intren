@@ -36,7 +36,7 @@ contract RegisterBYowner {
     }
 
 
-    function registerIntern(address _addr, uint8 _age, uint8 _cTask, bool _isRemote, string calldata _cName, string calldata _name) external AdminAccess() {
+    function registerIntern(address _addr, uint8 _age, uint8 _cTask, bool _isRemote, string calldata _cName, string calldata _name) external AdminAccess() isAlreadyExist(_addr){
         // if(_age <18 || bytes(_cName).length>0 || !_name)
         require(_age >= 18, "Must be 18 or older");
         require(bytes(_cName).length > 0, "course name required");
@@ -48,7 +48,11 @@ contract RegisterBYowner {
         studentAddress[adr].completed_tasks ++;
     }
 
-    function getDataRecord() external view isAlreadyExist(_addr) returns (
+    function deActiveIntern(address _adr) external AdminAccess(){
+        studentAddress[_adr].active_status = false;
+    }
+
+    function getDataRecord() external view returns (
         address _addr, uint8 _age, uint8 _cTask, bool _isRemote,
         string memory _cName, string memory _name
         ){
