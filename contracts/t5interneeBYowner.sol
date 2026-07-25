@@ -50,6 +50,10 @@ contract RegisterBYowner {
     }
     function BYinterneeDalytasks(uint8 _taskINDEX) external {
         // getAllTasks();
+        require(_taskINDEX >= 1 && _taskINDEX <= totalTasks, "Task not found");
+       require(!dailytask_complete[msg.sender][_taskINDEX], "Task already completed");
+
+
 
         dailytask_complete[msg.sender][_taskINDEX] = true;
         studentAddress[msg.sender].completed_tasks++;
@@ -57,7 +61,7 @@ contract RegisterBYowner {
         // emit (msg.sender, _taskINDEX, getTaskName(_taskINDEX));
     }
 
-    function getMyDONEtasks() external view isAlreadyExist(msg.sender) returns (string[] memory){
+    function getMyDONEtasks() external view returns (string[] memory){
         string[] memory status = new string[](totalTasks);
 
         for(uint8 i=0; i<totalTasks; i++){
