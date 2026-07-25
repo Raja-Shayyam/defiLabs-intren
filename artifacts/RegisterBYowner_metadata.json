@@ -23,6 +23,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint8",
+						"name": "_taskINDEX",
+						"type": "uint8"
+					}
+				],
+				"name": "BYinterneeDalytasks",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "_adr",
 						"type": "address"
@@ -31,6 +44,19 @@
 				"name": "deActiveIntern",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllTasks",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -72,6 +98,38 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getMyDONEtasks",
+				"outputs": [
+					{
+						"internalType": "bool[8]",
+						"name": "",
+						"type": "bool[8]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_taskNumber",
+						"type": "uint8"
+					}
+				],
+				"name": "getTaskName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -81,11 +139,6 @@
 					{
 						"internalType": "uint8",
 						"name": "_age",
-						"type": "uint8"
-					},
-					{
-						"internalType": "uint8",
-						"name": "_cTask",
 						"type": "uint8"
 					},
 					{
@@ -110,11 +163,29 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "totalTasks",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "adr",
-						"type": "address"
+						"internalType": "uint8",
+						"name": "_taskNo",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "_taskName",
+						"type": "string"
 					}
 				],
 				"name": "updateTask",
@@ -151,11 +222,11 @@
 	},
 	"sources": {
 		"contracts/t5interneeBYowner.sol": {
-			"keccak256": "0xdc58ea17d426e446ed8972f75af03a39ca1707742fbff36c1d8a087862914e13",
+			"keccak256": "0xa3cc1fac8ac1ff0010d9f49e887f5f552526529294aaa90719991975ad8640e0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://40920f66b5621cda199e3cf43e736e3c37a0040ac5ae70c7047bc7cc11cb5f62",
-				"dweb:/ipfs/QmRqNsCUdGGjqbp61nhhvt4KtC8fXYwvCBC2JZ4uByKzjt"
+				"bzz-raw://d6b2ef9963f518ee24ce266bfbe91683e4d7bd578e8fcb2454b095efd98a2dba",
+				"dweb:/ipfs/QmWg7D9jZDq6DXdVoRJwHPdnuW9GUTj9mtaG15eD9jp5gA"
 			]
 		}
 	},
