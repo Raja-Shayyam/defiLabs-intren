@@ -48,7 +48,7 @@ contract RegisterBYowner {
         studentAddress[_addr] = Intern(_age, 0, true, _isRemote, false, _cName, _name);
         
     }
-    function BYinterneeDalytasks(uint8 _taskINDEX) external isAlreadyExist(msg.sender){
+    function BYinterneeDalytasks(uint8 _taskINDEX) external {
         // getAllTasks();
 
         dailytask_complete[msg.sender][_taskINDEX] = true;
