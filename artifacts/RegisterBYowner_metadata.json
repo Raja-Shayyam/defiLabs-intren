@@ -1,0 +1,150 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "Admin_owner_can_Add_YOU",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "Already_exist_this_interne",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "getDataRecord",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_cTask",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isRemote",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "_cName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_cTask",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isRemote",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "_cName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "registerIntern",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "adr",
+						"type": "address"
+					}
+				],
+				"name": "updateTask",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/t5interneeBYowner.sol": "RegisterBYowner"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/t5interneeBYowner.sol": {
+			"keccak256": "0xb5cd7df0b219e323d20176ac516d9dd48addf6585749cfb09dcd9fb421d64096",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a09329ac01c2b52603b86076a1f8ae6493a249fcf612203683d8f394ff1edd9",
+				"dweb:/ipfs/Qmd6UrXPXhG9vRjCmeCULw7S84Gi9veW8kAKdUUyJKRGpA"
+			]
+		}
+	},
+	"version": 1
+}

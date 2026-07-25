@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/t5interneeBYowner.sol": "Re"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/t5interneeBYowner.sol": {
+			"keccak256": "0x938d413ee150f03d51cc6e84b9e4ee47311658cd31f6d178435e32a15afb46fe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5dc32550e82bd976f24dbe8ec3a9b6d5aefaa0be690f40d84abe3229bdc02165",
+				"dweb:/ipfs/QmZq1MFwZsbaMqaGpSgTHwt7yJ7xVgHFThxb8EwXxRfpNZ"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/t5interneeBYowner.sol": "RegisterBYo"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/t5interneeBYowner.sol": {
+			"keccak256": "0x0b8c99ca84b2e51143f8a342cbfc9582b8c35ca78787303c9638a36dd09a911c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0630df76cc8e1315cb73f010c899a2631b2b64d036d91b89828a3ee27d6a0d85",
+				"dweb:/ipfs/QmRWLp55WNeK2HJNUJjQe6j6DoUHrxHQqh3wG9iCDPSo2t"
+			]
+		}
+	},
+	"version": 1
+}
