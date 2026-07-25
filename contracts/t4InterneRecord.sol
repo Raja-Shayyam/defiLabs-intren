@@ -51,13 +51,17 @@ contract InternshipProgressTracker {
 
     function getMeInternee(address _addr,uint8 _age, bool _isremote, string memory _course ,string memory _name) public {
         // if(studentAddress[msg.sender].courseName != _course) revert alreadyInCourse();
-            uint8 _cTasks = 0;
-            bool _isActive = true;
-            bool _permenent_block=false;
 
         if(!studentAddress[msg.sender].active_status){
+            uint8 _cTasks = 0;
+            bool _isActive = true;
+            bool _permenent_block = false;
+
             studentAddress[_addr] = Student(_cTasks,_age, _isActive, _permenent_block,_isremote, _course,_name); // still geting from student his adress badd main msg.sender se fetch kr lain ge 
-        }else if(studentAddress[_addr].permenent_block ){ // to active him in another course
+        }else if(!studentAddress[_addr].permenent_block ){ // to active him in another course
+            uint8 _cTasks = 0;
+            bool _isActive = true;
+            bool _permenent_block = false;
             studentAddress[_addr] = Student(_cTasks,_age, _isActive,_permenent_block, _isremote, _course,_name); 
         }
         // Emit the registration event

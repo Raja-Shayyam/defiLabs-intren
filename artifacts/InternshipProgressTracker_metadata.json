@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.20+commit.a1b79de6"
+		"version": "0.8.34+commit.80d5c536"
 	},
 	"language": "Solidity",
 	"output": {
@@ -211,7 +211,7 @@
 		"compilationTarget": {
 			"contracts/t4InterneRecord.sol": "InternshipProgressTracker"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -224,11 +224,11 @@
 	},
 	"sources": {
 		"contracts/t4InterneRecord.sol": {
-			"keccak256": "0x4515aa0e287b8c2a1af5ccd4b4b0db0a501b14875137a09c1b93dfde4ef83ddc",
+			"keccak256": "0x5da6d725852c8c8eec59dcb29f5b02dae8a0ced7b16785a12ef8c68d6d9ae331",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a5f65ee36e4c901e0d4c43ac2fdfab1a570fd8f0a92ed34224dff8cca45a3091",
-				"dweb:/ipfs/QmQHaCC2wm4NA3M6ugXkYUcKkWRLsU5b98QhCSFmqbcbuJ"
+				"bzz-raw://5948469f5e3be55c158e97d1cbe2a5a7e319cd31bc5a6383ab958c5df8c98aa7",
+				"dweb:/ipfs/QmRtp8AgMHqNWAS4xGmoAr2ZBSuq4FVxQysCcAKidJ1Yjv"
 			]
 		}
 	},
