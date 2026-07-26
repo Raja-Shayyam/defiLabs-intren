@@ -49,30 +49,28 @@ contract InternshipProgressTracker {
         owner_deployer = msg.sender;
     }
 
-    function getMeInternee(address _addr,uint8 _age, bool _isremote, string memory _course ,string memory _name) public {
+    function getMeInternee(uint8 _age, bool _isremote, string memory _course ,string memory _name) public {
         // if(studentAddress[msg.sender].courseName != _course) revert alreadyInCourse();
 
         if(!studentAddress[msg.sender].active_status){ // if student is not active then this if will work and register a new internee as himself 
-            uint8 _cTasks = 0;
-            bool _isActive = true;
-            bool _permenent_block = false;
+            // uint8 _cTasks = 0;
+            // bool _isActive = true;
+            // bool _permenent_block = false;
 
-            studentAddress[_addr] = Student(_cTasks,_age, _isActive, _permenent_block,_isremote, _course,_name); // still geting from student his adress badd main msg.sender se fetch kr lain ge 
-        }else if(!studentAddress[_addr].permenent_block ){ // to active him in another course 
-            uint8 _cTasks = 0;
-            bool _isActive = true;
-            bool _permenent_block = false;
-            studentAddress[_addr] = Student(_cTasks,_age, _isActive,_permenent_block, _isremote, _course,_name); // still geting from student his adress badd main msg.sender se fetch krou ga
+            studentAddress[msg.sender] = Student(0,_age,true , _isremote, false, _course,_name); // still geting from student his adress badd main msg.sender se fetch kr lain ge 
+        }else if(!studentAddress[msg.sender].permenent_block ){ // to active him in another course 
+            // uint8 _cTasks = 0;
+            // bool _isActive = true;
+            // bool _permenent_block = false;
+            studentAddress[msg.sender] = Student(0,_age,true , _isremote, false, _course,_name); // still geting from student his adress badd main msg.sender se fetch krou ga
         }
         // Emit the registration event
         emit InternRegistered(msg.sender, _name, _course, _age, _isremote);
     }
 
-    function upDateYOURcompletedTASKS(uint8 _cTask) public {
-        if(_cTask < 10)
+    function upDateYOURcompletedTASKS(uint8 _cTask) public CheckStudent(){
+        if( _cTask > 50 ) revert updateValidTAsk_value();
         studentAddress[msg.sender].completedTasks = _cTask;
-        else 
-         revert updateValidTAsk_value();
     }
 
     function upDateYOURinfo(uint8 _age, bool _isremote, string memory _name) public CheckStudent() {
