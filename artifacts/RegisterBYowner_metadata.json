@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.20+commit.a1b79de6"
+		"version": "0.8.34+commit.80d5c536"
 	},
 	"language": "Solidity",
 	"output": {
@@ -19,6 +19,69 @@
 				"inputs": [],
 				"name": "Already_exist_this_interne",
 				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "intern",
+						"type": "address"
+					}
+				],
+				"name": "InternDeactivated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "intern",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "course",
+						"type": "string"
+					}
+				],
+				"name": "InternRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "intern",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "taskIndex",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "totalCompleted",
+						"type": "uint8"
+					}
+				],
+				"name": "TaskCompleted",
+				"type": "event"
 			},
 			{
 				"inputs": [
@@ -60,7 +123,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_adr",
+						"type": "address"
+					}
+				],
 				"name": "getDataRecord",
 				"outputs": [
 					{
@@ -209,7 +278,7 @@
 		"compilationTarget": {
 			"contracts/t5interneeBYowner.sol": "RegisterBYowner"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -222,11 +291,11 @@
 	},
 	"sources": {
 		"contracts/t5interneeBYowner.sol": {
-			"keccak256": "0xe69d098ee02dce253367ffacfb95879e56353f2b6eef50d1ce248a61b4f15df1",
+			"keccak256": "0xac25aeb2f8df5b7f71c3c27fdd4af4ab804ac2f97ea27f374992dae4e3c6780a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://06dcc5e0f2909feed563536c7ebf9c702a98b437b0a4c0e12cb01796bc95f7f8",
-				"dweb:/ipfs/QmeGJZppX4ZpSknjT8NLaeJKkKq4Vnqa6G4pqV51gGUSbr"
+				"bzz-raw://94fdf7582f46a6f84d47c344ad6e464cb11c2c452cfaae1eb286f7bd16c782af",
+				"dweb:/ipfs/QmNWBLMLLi17saKs6sBbuBaCYvQ75pk9ywsFgn2WCav4Ax"
 			]
 		}
 	},

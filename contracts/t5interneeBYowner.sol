@@ -34,7 +34,9 @@ contract RegisterBYowner {
         _;
     }
     
-
+    event InternRegistered(address indexed intern, string name, string course);
+    event InternDeactivated(address indexed intern);
+    event TaskCompleted(address indexed intern, uint8 taskIndex, uint8 totalCompleted);
     constructor() {
         Owner = msg.sender;
     }
@@ -47,6 +49,7 @@ contract RegisterBYowner {
         require(bytes(_name).length > 0, "Name of internee required");
         studentAddress[_addr] = Intern(_age, 0, true, _isRemote, false, _cName, _name);
         
+    emit InternRegistered(_addr, _name, _cName);
     }
     function BYinterneeDalytasks(uint8 _taskINDEX) external {
         // getAllTasks();
@@ -59,6 +62,7 @@ contract RegisterBYowner {
         studentAddress[msg.sender].completed_tasks++;
 
         // emit (msg.sender, _taskINDEX, getTaskName(_taskINDEX));
+        emit TaskCompleted(msg.sender, _taskINDEX, studentAddress[msg.sender].completed_tasks);
     }
 
     function getMyDONEtasks() external view returns (string[] memory){
@@ -94,6 +98,7 @@ contract RegisterBYowner {
 
     function deActiveIntern(address _adr) external AdminAccess(){
         studentAddress[_adr].active_status = false;
+        emit InternDeactivated(_adr);
     }
 
     function getAllTasks() external view returns (string[] memory) {
@@ -116,11 +121,12 @@ contract RegisterBYowner {
         // ];
     }
 
-    function getDataRecord() external view returns (
+    function getDataRecord(address _adr) external view returns (
         address _addr, uint8 _age, uint8 _cTask, bool _isRemote,
         string memory _cName, string memory _name
         ){
-            Intern storage intrn = studentAddress[_addr];
+            Intern storage intrn = studentAddress[_adr];
+            _addr = _adr;
             _age = intrn.age;
             _cTask = intrn.completed_tasks;
             _isRemote = intrn.isRemoteWork;
